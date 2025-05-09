@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/ScreenBackground1">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_toolbar_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:text="Note it"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:textSize="20sp"
+                android:paddingVertical="10dp"
+                app:fontFamily="@font/ubuntu_regular"
+                style="@style/ScreenTextColor4"/>
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/toolbar_search_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionSearch"
+                android:theme="@style/ScreenSearchViewColor"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_toolbar_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_settings"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="12dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                style="@style/ScreenImageColor2"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_toolbar_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_delete"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="12dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                style="@style/ScreenImageColor2"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:id="@+id/view"
+            style="@style/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_app_bar" />
+
+        <ProgressBar
+            android:id="@+id/progress_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="100dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/ll_app_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_empty_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:elevation="100dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintTop_toBottomOf="@id/ll_app_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_empty_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:text="@string/start_adding_notes"
+                android:paddingHorizontal="50dp"
+                style="@style/ScreenTextColor3"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_syncing_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingVertical="8dp"
+                style="@style/ScreenBackground3">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Syncing Notes..."
+                    android:textStyle="bold|italic"
+                    style="@style/ScreenTextColor1"
+                    android:layout_marginEnd="12dp"/>
+
+                <ProgressBar
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    style="@style/ProgressBarStyle1"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_sort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sort by date modified"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:cornerRadius="0dp"
+                android:background="@null"
+                android:letterSpacing="0"
+                android:minHeight="35dp"
+                app:iconGravity="textEnd"
+                android:textAllCaps="false"
+                android:textStyle="normal"
+                app:icon="@drawable/ic_arrow_drop_down"
+                style="@style/ButtonStyle1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_notes"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_note"
+                android:layout_marginTop="4dp"
+                android:splitMotionEvents="false"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_selected_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3 Notes Selected"
+                android:textSize="18sp"
+                android:visibility="gone"
+                style="@style/ScreenTextColor1"
+                android:textStyle="bold"
+                android:background="@color/blue_200"
+                android:elevation="100dp"
+                android:paddingHorizontal="20dp"
+                android:textAlignment="center"
+                android:paddingVertical="12dp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            style="@style/ScreenFabColor"
+            android:textAllCaps="false"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

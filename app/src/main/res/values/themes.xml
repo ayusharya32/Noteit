@@ -1,0 +1,200 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Noteit" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_300</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="colorAccent">@color/grey_500</item>
+    </style>
+
+    <style name="Theme.Noteit" parent="Base.Theme.Noteit" />
+
+    <style name="Theme.NoteIt.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo</item>
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+        <item name="splashScreenIconSize">100dp</item>
+        <item name="postSplashScreenTheme">@style/Theme.Noteit</item>
+    </style>
+
+    <style name="LinedEditTextStyle">
+        <item name="lineColor">@color/blue_180</item>
+        <item name="hintTextColor">@color/grey_200</item>
+        <item name="android:textColor">@color/grey_500</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="fontFamily">@font/inter_medium</item>
+    </style>
+
+    <style name="LinedTextViewStyle">
+        <item name="lineColor">@color/blue_180</item>
+        <item name="hintTextColor">@color/grey_200</item>
+        <item name="android:textColor">@color/grey_500</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="fontFamily">@font/inter_medium</item>
+    </style>
+
+    <style name="FontPoppinsLight">
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="FontPoppinsMedium">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="FontPoppinsRegular">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="FontPacifico">
+        <item name="fontFamily">@font/pacifico_regular</item>
+        <item name="android:fontFamily">@font/pacifico_regular</item>
+    </style>
+
+    <style name="ScreenBackground1">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="ScreenBackground2">
+        <item name="android:background">@color/grey_400</item>
+    </style>
+
+    <style name="ScreenBackground3">
+        <item name="android:background">@color/blue_180</item>
+    </style>
+
+    <style name="ScreenTextColor1">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ScreenTextColor2">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ScreenTextColor3">
+        <item name="android:textColor">@color/grey_300</item>
+        <item name="drawableTint">@color/grey_300</item>
+    </style>
+
+    <style name="ScreenTextColor4">
+        <item name="android:textColor">@color/grey_400</item>
+        <item name="drawableTint">@color/grey_400</item>
+    </style>
+
+    <style name="ScreenTextColorWithBackground1">
+        <item name="android:textColor">@color/grey_400</item>
+        <item name="android:background">@color/grey_200</item>
+        <item name="drawableTint">@color/grey_400</item>
+    </style>
+
+    <style name="ScreenTextColorWithBackground2">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/blue_200</item>
+        <item name="drawableTint">@color/white</item>
+    </style>
+
+    <style name="ScreenImageColor1">
+        <item name="tint">@color/white</item>
+    </style>
+
+    <style name="ScreenImageColor2">
+        <item name="tint">@color/grey_400</item>
+    </style>
+
+    <style name="ButtonStyle1">
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/grey_400</item>
+        <item name="android:textStyle">bold</item>
+        <item name="iconTint">@color/grey_400</item>
+        <item name="rippleColor">@color/grey_200</item>
+    </style>
+
+    <style name="ButtonStyle2">
+        <item name="backgroundTint">@color/blue_300</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="iconTint">@color/white</item>
+        <item name="rippleColor">@color/white</item>
+    </style>
+
+    <style name="ButtonStyle3">
+        <item name="backgroundTint">@color/grey_100</item>
+        <item name="android:textColor">@color/grey_400</item>
+        <item name="android:textStyle">bold</item>
+        <item name="iconTint">@color/grey_400</item>
+        <item name="rippleColor">@color/white</item>
+    </style>
+
+    <style name="EditTextStyle1">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/grey_400</item>
+        <item name="android:textStyle">bold</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="EditTextStyle2">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/grey_400</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="ScreenFabColor">
+        <item name="backgroundTint">@color/blue_200</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    <style name="ScreenExtendedFabColor">
+        <item name="backgroundTint">@color/blue_200</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="ScreenSearchViewColor" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorPrimary">@color/grey_400</item>
+        <item name="android:textColorSecondary">@color/grey_400</item>
+    </style>
+
+    <style name="ProgressBarStyle1">
+        <item name="android:indeterminateTint">@color/white</item>
+    </style>
+
+    <style name="ProgressBarStyle2">
+        <item name="android:indeterminateTint">@color/grey_400</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/grey_200</item>
+    </style>
+
+    <style name="circleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="DialogOverlay" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="materialAlertDialogBodyTextStyle">@style/BodyText</item>
+        <item name="shapeAppearanceOverlay">@style/DialogCorners</item>
+    </style>
+
+    <style name="BodyText" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="DialogCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+</resources>
